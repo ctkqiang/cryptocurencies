@@ -18,3 +18,5 @@ function BTC(){
     });
 }
 BTC().then(val => console.log(val));
+
+/*run it with NodeJs*/

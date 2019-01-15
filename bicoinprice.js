@@ -2,6 +2,7 @@
 Author: John Melody Melissa;
 proj: BITCOIN PRICE API
 */
+
 const request = require('request');
 
 function BTC(){
@@ -18,3 +19,6 @@ function BTC(){
     });
 }
 BTC().then(val => console.log("The Current [BTC] price: " + "USD$ " + val));
+
+// Run this script with NodeJs; --in Terminal
+// " node bicoinprice.js "

@@ -17,6 +17,4 @@ function BTC(){
         });
     });
 }
-BTC().then(val => console.log(val));
-
-/*run it with NodeJs*/
+BTC().then(val => console.log("The Current [BTC] price: " + "USD$ " + val));

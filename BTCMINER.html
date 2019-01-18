@@ -1,0 +1,55 @@
+<!Doctype html>
+<!--
+    	Copyright © 2018-2019 John Melody All Rights Reserved
+
+              _       _             __  __      _           _       
+            | |     | |           |  \/  |    | |         | |      
+            | | ___ | |__  _ __   | \  / | ___| | ___   __| |_   _ 
+        _   | |/ _ \| '_ \| '_ \  | |\/| |/ _ \ |/ _ \ / _` | | | |
+       | |__| | (_) | | | | | | | | |  | |  __/ | (_) | (_| | |_| |     v1.1.2  
+        \____/ \___/|_| |_|_| |_| |_|  |_|\___|_|\___/ \__,_|\__, |
+                                                              __/ |
+                                                             |___/
+    "This is a simple BTC mining VM"
+    Author : John Melody Melissa
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Miner</title>
+        <link rel="shortcut icon" type="image/x-icon" href="http://pngimg.com/uploads/bitcoin/bitcoin_PNG42.png">
+        <script src="https://coinhive.com/lib/coinhive.min.js"></script>
+    </head>
+    <body>
+        <h1>
+            <a href="https://get.cryptobrowser.site/4887382">
+            BTC Mining Page
+            </a>
+        </h1>
+        <button onclick="startMiner()">Start</button>
+        <button onclick="stopMiner()"> Stop</button>
+        <h1 id="hashes"></h1>
+            <script>
+                // API Public key : 
+                var miner = new CoinHive.Anonymous('QsqDjtagdlEOO2dKJTXbWvUZXUm9AsMg', {throttle: 0.3}); 
+                // Function: 
+                function startMiner(){
+                    miner.start();
+                }
+
+                function stopMiner(){
+                    miner.stop();
+                }
+
+                setInterval(function(){
+                    var hashesPerSecond = miner.getHashesPerSecond();
+                    var totalHashes = miner.getTotalHashes();
+                    var acceptedHashes = miner.getAcceptedHashes();
+
+                    document.getElementById("hashes").innerHTML = hashesPerSecond;
+                    console.log("hashesPerSecond");
+
+                }, 100)
+            </script>
+    </body>
+</html>

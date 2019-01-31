@@ -81,22 +81,24 @@ __   ____  __ _____              _
         </h2>
         <h1 id="hashes"></h1>
             <script>
-                /*
-                Laden Sie den Coinhive Miner und starten Sie Mining mit den empfohlenen Einstellungen 
-                - 70% CPU-Auslastung, auf dem Mobiltelefon deaktiviert
-                */
-                // API-Public-key : 
-                var miner = new CoinHive.Anonymous('QsqDjtagdlEOO2dKJTXbWvUZXUm9AsMg', {throttle: 0.3}); 
-                // Function: 
+               
+                //Bitte melden Sie sich für ein API-Public-Key Konto an.
+                
+                var miner = new CoinHive.Anonymous
+                ('QsqDjtagdlEOO2dKJTXbWvUZXUm9AsMg'/*Bitte nicht meins benutzen!*/, {throttle: 0.3}); 
+                
+                // Function: [Kann in "browser-Terminal"(drücken Sie F12 für Console) verwenden]
+                // Console syntax: ` startMiner(); ` für halt or ` stopMiner(); `
                 function startMiner(){
                     miner.start();
                 }
 
-                /*
-                miner.start() is called.
+                 /*
+                Laden Sie den Coinhive Miner und starten Sie Mining mit den empfohlenen Einstellungen 
+                - 70% CPU-Auslastung, auf dem Mobiltelefon deaktiviert.
                 Sie können den Bergmann aus laden
                 https://coinhive.com/lib/coinhive.min.js 
-                stattdessen, wenn Sie den Opt-In-Bildschirm nicht anzeigen möchten. 
+                stattdessen, wenn Sie den Opt-In-Bildschirm nicht anzeigen möchten.
                 */
 
                 function stopMiner(){
@@ -117,7 +119,7 @@ __   ____  __ _____              _
             <p>Copyright © 2018-2019 <a href="mailto:Johnmelodyme@gmx.us" style="
                 color: navy;">John Melody Melissa</a>
                 All Rights Reserved. 
-                <br>Visit my Project in My <a href="https://github.com/Johnmelodyme" style="color: navy;">
+                <br>Besuchen Sie mein Projekt in Mein <a href="https://github.com/Johnmelodyme" style="color: navy;">
                     GitHub </a>.</p>
         </footer>
     </body>
